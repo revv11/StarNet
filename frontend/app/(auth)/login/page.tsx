@@ -23,7 +23,7 @@ export default function Login(){
             
             // await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/google`, {withCredentials: true})
             window.location.href = process.env.NEXT_PUBLIC_OAUTH_URL || "" ;
-                
+               //add tjis 
         }
         catch(e){
             console.log(e)
