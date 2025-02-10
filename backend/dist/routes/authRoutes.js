@@ -38,7 +38,11 @@ const creditdec_1 = __importDefault(require("../lib/creditdec"));
 const cookieopt = {
     httpOnly: false,
     secure: true,
-    maxAge: 24 * 60 * 60 * 1000
+    maxAge: 24 * 60 * 60 * 1000,
+    sameSite: 'none',
+    domain: process.env.NODE_ENV === 'production'
+        ? '.vercel.app'
+        : 'localhost'
 };
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -157,7 +161,11 @@ router.get('/logout', (req, res) => {
         res.cookie('accessToken', null, {
             httpOnly: false,
             secure: true,
-            maxAge: 10
+            maxAge: 10,
+            sameSite: 'none',
+            domain: process.env.NODE_ENV === 'production'
+                ? '.vercel.app'
+                : 'localhost'
         });
         res.status(200).json({ message: "logout success" });
     }
