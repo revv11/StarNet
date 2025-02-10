@@ -37,7 +37,7 @@ const agent_1 = require("../lib/llm/agent.");
 const creditdec_1 = __importDefault(require("../lib/creditdec"));
 const cookieopt = {
     httpOnly: false,
-    secure: false,
+    secure: true,
     maxAge: 24 * 60 * 60 * 1000
 };
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -156,7 +156,7 @@ router.get('/logout', (req, res) => {
     try {
         res.cookie('accessToken', null, {
             httpOnly: false,
-            secure: false,
+            secure: true,
             maxAge: 10
         });
         res.status(200).json({ message: "logout success" });

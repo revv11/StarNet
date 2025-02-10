@@ -45,7 +45,6 @@ app.listen(PORT, () => {
 });
 app.get('/', (req, res) => {
     console.log("hepppppppp");
-    res.send("hello")
 });
 node_cron_1.default.schedule('*/5 * * * *', () => __awaiter(void 0, void 0, void 0, function* () {
     console.log('Running OTP cleanup...');
