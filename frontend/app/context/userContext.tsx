@@ -56,7 +56,7 @@ export const UserContextProvider = ({children}: {children: ReactNode})=>{
             }
         setuser();
         setLoading(false)
-    },[currentUser, userId])
+    },[])
 
     if(loading){
         return(
