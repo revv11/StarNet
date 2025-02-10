@@ -39,6 +39,13 @@ app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)(corsOptions));
 app.use(passport_1.default.initialize());
 app.use(express_1.default.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Origin', FRONTEND_URL);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,UPDATE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+    next();
+});
 app.use(authRoutes_1.default);
 app.listen(PORT, () => {
     console.log("listening on port", PORT);

@@ -42,7 +42,8 @@ const cookieopt = {
     sameSite: 'none',
     domain: process.env.NODE_ENV === 'production'
         ? '.vercel.app'
-        : 'localhost'
+        : 'localhost',
+    path: '/'
 };
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
