@@ -30,9 +30,7 @@ const PORT = process.env.PORT || 8000;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 //CORS
 const corsOptions = {
-    origin: process.env.NODE_ENV === 'production'
-        ? 'https://starnet-seven.vercel.app/' // Your exact Vercel URL
-        : 'http://localhost:3000',
+    origin: process.env.NODE_ENV === FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 200,
 };
