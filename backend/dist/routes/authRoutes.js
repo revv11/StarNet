@@ -36,7 +36,7 @@ require("../config/passportjwt");
 const agent_1 = require("../lib/llm/agent.");
 const creditdec_1 = __importDefault(require("../lib/creditdec"));
 const cookieopt = {
-    httpOnly: false,
+    httpOnly: true,
     secure: true,
     maxAge: 24 * 60 * 60 * 1000,
     sameSite: 'none',
