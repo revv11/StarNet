@@ -21,7 +21,6 @@ const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const node_cron_1 = __importDefault(require("node-cron"));
 const deleteExpiredOtps_1 = require("./lib/opthandle/deleteExpiredOtps");
 require("./config/passportjwt");
-const imap_1 = require("./lib/imap");
 //CONFIGS
 dotenv_1.default.config();
 //CONSTANTS
@@ -58,4 +57,4 @@ node_cron_1.default.schedule('*/5 * * * *', () => __awaiter(void 0, void 0, void
     console.log('Running OTP cleanup...');
     yield (0, deleteExpiredOtps_1.deleteExpiredOTPs)();
 }));
-imap_1.imap.connect();
+// imap.connect();
