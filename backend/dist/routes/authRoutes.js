@@ -209,7 +209,7 @@ router.get('/auth/google/callback', passport_1.default.authenticate('google', { 
     //@ts-ignore
     const { user, token } = req.user;
     res.cookie('accessToken', token);
-    // res.redirect(`${process.env.FRONTEND_URL}/dashboard`)            
+    res.redirect(`${process.env.FRONTEND_URL}/dashboard`);
 });
 router.get('/user/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
