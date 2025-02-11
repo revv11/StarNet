@@ -36,13 +36,10 @@ require("../config/passportjwt");
 const agent_1 = require("../lib/llm/agent.");
 const creditdec_1 = __importDefault(require("../lib/creditdec"));
 const cookieopt = {
-    httpOnly: true,
+    httpOnly: false,
     secure: true,
     maxAge: 24 * 60 * 60 * 1000,
     sameSite: 'none',
-    domain: process.env.NODE_ENV === 'production'
-        ? '.vercel.app'
-        : 'localhost',
     path: '/'
 };
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
