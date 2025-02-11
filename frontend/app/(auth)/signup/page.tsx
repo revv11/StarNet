@@ -21,8 +21,8 @@ export default function Signup(){
     const handleGoogle = async(e:React.FormEvent)=>{
       e.preventDefault()
       try{
-         await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/google`, {withCredentials: true})
-        // window.location.href = process.env.NEXT_PUBLIC_OAUTH_URL || "" ;
+        //  await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/google`, {withCredentials: true})
+        window.location.href = process.env.NEXT_PUBLIC_OAUTH_URL || "" ;
           
       }
       catch(e){
