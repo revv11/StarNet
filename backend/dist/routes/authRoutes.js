@@ -39,7 +39,7 @@ const cookieopt = {
     httpOnly: false,
     secure: true,
     maxAge: 24 * 60 * 60 * 1000,
-    // sameSite: 'none',
+    sameSite: 'strict',
     path: '/'
 };
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
