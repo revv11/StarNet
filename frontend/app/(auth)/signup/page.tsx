@@ -41,7 +41,7 @@ export default function Signup(){
             }
             else{
               
-              await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/signup`, {email, password}, {withCredentials: true})
+              const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/signup`, {email, password}, {withCredentials: true})
               
               router.push('/verify')
               
