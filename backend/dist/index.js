@@ -29,7 +29,8 @@ const PORT = process.env.PORT || 8000;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 //CORS
 const corsOptions = {
-    origin: process.env.NODE_ENV === FRONTEND_URL,
+    // origin: process.env.NODE_ENV === FRONTEND_URL ,
+    origin: FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 200,
 };
